@@ -1,3 +1,5 @@
+import collections
+from itertools import count
 import sys
 
 '''
@@ -82,8 +84,8 @@ if username in usernames:
                     number_list.append(int(i))
             numero_sum = 0
             for n in number_list: # SECTENI VSECH CISEL V TEXTU
-                numero_sum = numero_sum + n
-            
+                numero_sum = numero_sum + n          
+
             # TISK NASBIRANYCH HODNOT
             print(f"Number of Words: {number_of_words}")
             print(f"Capitals: {capital_words}\nLower: {lower_words}\nUpper: {upper_words}\nNumers: {numers}\nSum of Numbers: {numero_sum}")
@@ -91,6 +93,17 @@ if username in usernames:
             print("Lowers: " + ("*" * lower_words))
             print("Uppers: " + ("*" * upper_words))
             print("Numeros: " + ("*" * numers))
+
+            worderino = [len(x) for x in splited]
+            worderino.sort()
+            
+            occurences = collections.Counter(worderino)
+            print(dict(occurences))
+            print("...LEN...|...OCC...|...NUM...")
+            for i in occurences:
+                star = occurences[i] * "*"
+                print(f"{i}|{star}|{occurences[i]}")
+        
             
     # KONTROLA HESEL VUCI DOSTUPNYM HESLUM
     elif password in passwords:
