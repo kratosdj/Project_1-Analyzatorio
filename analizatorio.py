@@ -88,6 +88,10 @@ if username in usernames:
             # num_count = num_wrd.count(True)
             # print(f"Number words {num_count}")
             
+            # num_list = [ int(x) for x in splited if x.isdigit()]
+            # num_sum = sum(num_list)
+            # print(f"Numeric Sum is {num_sum}")
+            
             capital_words = 0 # POCET SLOV ZACINAJICICH VELKYM PISMEM
             lower_words = 0 # POCET SLOV JEN S MALYMI PISMENY
             upper_words = 0 # POCET SLOV JEN S VELKYMI PISMENY
