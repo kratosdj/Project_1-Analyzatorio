@@ -67,6 +67,27 @@ if username in usernames:
             text = TEXTS[analyze_text - 1] # ODECTEME JEDNU PRO SPRAVNY INDEX
             splited = text.split() # SPLIT TEXTU
             number_of_words = len(splited) # POCET SLOV V TEXTU
+            
+            ###
+            ### POSSIBLE COMPREHENSION SOLUTION
+            ###
+
+            # cap_wrd = [ x.istitle() for x in splited]
+            # cap_count = cap_wrd.count(True)
+            # print(f"Number of Cap-WRD {cap_count}")
+            
+            # low_wrd = [ x.islower() for x in splited ]
+            # low_count = low_wrd.count(True)
+            # print(f"Lower words {low_count}")
+            
+            # upp_wrd = [ x.isupper() for x in splited ]
+            # upp_count = upp_wrd.count(True)
+            # print(f"Upper words {upp_count}")
+
+            # num_wrd = [ x.isnumeric() for x in splited ]
+            # num_count = num_wrd.count(True)
+            # print(f"Number words {num_count}")
+            
             capital_words = 0 # POCET SLOV ZACINAJICICH VELKYM PISMEM
             lower_words = 0 # POCET SLOV JEN S MALYMI PISMENY
             upper_words = 0 # POCET SLOV JEN S VELKYMI PISMENY
