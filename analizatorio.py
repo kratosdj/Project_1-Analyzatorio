@@ -98,7 +98,6 @@ if username in usernames:
             worderino.sort()
             
             occurences = collections.Counter(worderino)
-            print(dict(occurences))
             print("...LEN...|...OCC...|...NUM...")
             for i in occurences:
                 star = occurences[i] * "*"
