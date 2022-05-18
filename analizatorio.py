@@ -123,10 +123,13 @@ if username in usernames:
             worderino.sort()
             
             occurences = collections.Counter(worderino)
-            print("...LEN...|...OCC...|...NUM...")
+            print("#" * 70)
+            print("# {:<20} {:<30} {:<15}#".format("LEN", "OCCURRENCE", "NUM"))
+            print("#" * 70)
             for i in occurences:
                 star = occurences[i] * "*"
-                print(f"{i}|{star}|{occurences[i]}")
+                print("# {:<20} {:<30} {:<15}#".format(i, star, occurences[i]))
+            print("#" * 70)
         
             
     # KONTROLA HESEL VUCI DOSTUPNYM HESLUM
