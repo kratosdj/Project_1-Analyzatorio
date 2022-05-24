@@ -118,8 +118,8 @@ if username in usernames:
             print("Lowers: " + ("*" * lower_words))
             print("Uppers: " + ("*" * upper_words))
             print("Numeros: " + ("*" * numers))
-
-            worderino = [len(x) for x in splited]
+            
+            worderino = [len(x)-1 if x.endswith(('.', ',', '!', '?', ':', ';')) else len(x) for x in splited]
             worderino.sort()
             
             occurences = collections.Counter(worderino)
@@ -130,6 +130,7 @@ if username in usernames:
                 star = occurences[i] * "*"
                 print("# {:<20} {:<30} {:<15}#".format(i, star, occurences[i]))
             print("#" * 70)
+            print(occurences)
         
             
     # KONTROLA HESEL VUCI DOSTUPNYM HESLUM
